@@ -141,7 +141,7 @@ a.language-container {
 }
 
 .register-input-container > label {
-    display: inline;
+    display: inline-block;
     color: #AEAEAE;
     font-weight: 700;
     font-family: 'Lato';
@@ -169,12 +169,18 @@ button  {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(2, 192, 78);
+    background-color: #02c04e;
     padding: 0;
     border: none;
     border-radius: .3rem;
     height: 2.4rem;
     width: 40%;
+}
+
+#register-button {
+    align-self: center;
+    margin-top: .6rem;
+    background-color: #D8D8D8;
 }
 
 #submit-arrow {
