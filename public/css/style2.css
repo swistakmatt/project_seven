@@ -1,0 +1,194 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato';
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1A1C24;
+}
+
+a.language-container {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .4rem;
+
+    background-color: #24252F;
+    color: #CBCBCB;
+    padding: .6rem;
+    border-radius: .4rem;
+
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.polish-flag-svg {
+    height: 1.2rem;
+}
+
+.logo-container {
+    width: 16rem;
+    background-color: #24252F;
+    margin: 2rem;
+    padding: 1.4rem;
+    border-radius: .8rem;
+}
+
+.login-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #DCDCDC;
+    margin-bottom: 1rem;
+}
+
+.login-container {
+    background-color: #24252F;
+    padding: 1.6rem;
+    border-radius: .6rem;
+}
+
+.login-container > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .6rem;
+}
+
+.login-input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: .6rem;
+}
+
+.login-input-container > input {
+    background-color: #D8D8D8;
+    color: #24252F;
+    width: 16rem;
+    height: 2.4rem;
+    padding: .4rem .6rem;
+    border-radius: .4rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Lato';
+}
+
+.login-input-container > label {
+    display: inline;
+    color: #AEAEAE;
+    font-weight: 700;
+    font-family: 'Lato';
+    font-size: 0.8rem;
+}
+
+.register-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #DCDCDC;
+    margin-bottom: 1rem;
+}
+
+.register-container {
+    background-color: #24252F;
+    padding: 1.6rem;
+    border-radius: .6rem;
+}
+
+.register-container > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .6rem;
+}
+
+.register-input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: .6rem;
+}
+
+.register-input-container > input {
+    background-color: #D8D8D8;
+    color: #24252F;
+    width: 16rem;
+    height: 2.4rem;
+    padding: .4rem .6rem;
+    border-radius: .4rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Lato';
+}
+
+.register-input-container > label {
+    display: inline;
+    color: #AEAEAE;
+    font-weight: 700;
+    font-family: 'Lato';
+    font-size: 0.8rem;
+}
+
+.checkbox-container {
+    display:flex;
+    flex-direction: row;
+    
+    gap: .4rem;
+
+    color: #D9D9D9;
+    font-size: .8rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    text-align: center;
+}
+
+#keep-logged {
+    accent-color: #02BF4D;
+}
+
+button  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(2, 192, 78);
+    padding: 0;
+    border: none;
+    border-radius: .3rem;
+    height: 2.4rem;
+    width: 40%;
+}
+
+#submit-arrow {
+    display: inline-block;
+    height: 1.6rem;
+}
+
+.container > a {
+    color: #CBCBCB;
+    font-size: 0.7rem;
+    margin-top: 0.6rem;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+}

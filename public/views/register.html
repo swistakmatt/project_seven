@@ -4,7 +4,7 @@
         <link rel="stylesheet" type="text/css" href="public/css/style2.css">
         <link type='text/css' href='http://fonts.googleapis.com/css?family=Lato:400,700' />
         <script src="https://kit.fontawesome.com/8a321b7213.js" crossorigin="anonymous"></script>
-        <title>project_seven - Logowanie</title>
+        <title>project_seven - Rejestracja</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,27 +20,21 @@
             <div class="logo-container">
                 <img class="logo-svg" src="public/img/seven-logo.svg">
             </div>
-            <span class="login-text">Zaloguj się</span>
-            <div class="login-container">
+            <span class="register-text">Stwórz konto</span>
+            <div class="register-container">
                 <form>
-                    <div class="login-input-container">
+                    <div class="register-input-container">
                         <label for="email"> Email</label>
                         <input name="email" type="text" placeholder="jankowalski@email.com">
                         <label for="password"> Hasło</label>
                         <input name="password" type="password" placeholder="123!słodkiekotki420">
+                        <label for="password"> Powtórz hasło</label>
+                        <input name="password" type="password" placeholder="123!słodkiekotki420">
                     </div>
-                    <div class = "checkbox-container">
-                        <input type="checkbox" id="keep-logged" name="keep-logged" value="true">
-                        <label for="keep-logged"> Nie wylogowuj mnie</label>
-                    </div>
-                    <button><img id="submit-arrow" src="public/img/submit-arrow.svg"></button>
                 </form>
             </div>
-            <a href="/recover-password">
-                <span>Nie możesz się zalogować?</span>
-            </a>
-            <a href="/register">
-                <span>Stwórz konto</span>
+            <a href="/login">
+                <span>Masz już konto?</span>
             </a>
         </div>
     </body>
