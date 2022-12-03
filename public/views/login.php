@@ -22,7 +22,7 @@
             </div>
             <span class="login-text">Zaloguj się</span>
             <div class="login-container">
-                <div class="messages">
+                <div class="messages-container">
                     <?php
                         if(isset($messages)){
                             foreach($messages as $message) {
@@ -31,7 +31,7 @@
                         }
                     ?>
                 </div>
-                <form>
+                <form action="login" method="POST">
                     <div class="login-input-container">
                         <label for="email"> Email</label>
                         <input name="email" type="text" placeholder="jankowalski@email.com">
@@ -42,7 +42,7 @@
                         <input type="checkbox" id="keep-logged" name="keep-logged" value="true">
                         <label for="keep-logged"> Nie wylogowuj mnie</label>
                     </div>
-                    <button><img id="submit-arrow" src="public/img/submit-arrow.svg"></button>
+                    <button type="submit"><img id="submit-arrow" src="public/img/submit-arrow.svg"></button>
                 </form>
             </div>
             <a href="/recover-password">

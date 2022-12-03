@@ -76,6 +76,15 @@ a.language-container {
     border-radius: .6rem;
 }
 
+.messages-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+    color: #ff5050;
+}
+
 .login-container > form {
     display: flex;
     flex-direction: column;
