@@ -224,3 +224,16 @@ button  {
 a {
     text-decoration: none;
 }
+
+.roulette-game-container {
+    align-items: center;
+}
+
+.game-dot {
+    height: 100px;
+    width: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: -4px;
+  }

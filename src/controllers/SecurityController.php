@@ -19,11 +19,10 @@ class SecurityController extends AppController {
         }
 
         if ($user->getPassword() !== $password) {
-            return $this->render('login', ['messages' => ['Podano niepoprawne hasło!']]);
+            return $this->render('login', ['messages' => ['Podano nieprawidłowe hasło!']]);
         }
 
-        return $this->render('login', ['messages' => ['Zalogowano pomyślnie!']]);
-        // $url = "http://$_SERVER[HTTP_HOST]";
-        // header("Location: {$url}/roulette");
+        $url = "http://$_SERVER[HTTP_HOST]";
+        header("Location: {$url}/roulette");
     }
 }
