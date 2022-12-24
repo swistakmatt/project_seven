@@ -19,6 +19,10 @@ class DefaultController extends AppController {
     public function roulette() {
         $this->render('roulette');
     }
+
+    public function recover() {
+        $this->render('recover');
+    }
 }
 
 ?>

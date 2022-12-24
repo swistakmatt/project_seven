@@ -1,10 +1,40 @@
+@font-face {
+    font-family: 'LatoWeb';
+    src: url('../fonts/Lato-Regular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/Lato-Regular.woff2') format('woff2'); /* Modern Browsers */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+ 
+@font-face {
+    font-family: 'LatoWebLight';
+    src: url('fonts/Lato-Light.eot'); /* IE9 Compat Modes */
+    src: url('fonts/Lato-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/Lato-Light.woff2') format('woff2'); /* Modern Browsers */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'LatoWebItalic';
+    src: url('fonts/Lato-Italic.eot'); /* IE9 Compat Modes */
+    src: url('fonts/Lato-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/Lato-Italic.woff2') format('woff2'); /* Modern Browsers */
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
 html {
     font-size: 16px;
 }
 
 body {
     margin: 0;
-    font-family: 'Lato';
+    font-family: 'LatoWeb';
 }
 
 .container {
@@ -112,14 +142,14 @@ a.language-container {
     outline: none;
     font-size: 1rem;
     font-weight: 700;
-    font-family: 'Lato';
+    font-family: 'LatoWeb';
 }
 
 .login-input-container > label {
     display: inline;
     color: #AEAEAE;
     font-weight: 700;
-    font-family: 'Lato';
+    font-family: 'LatoWeb';
     font-size: 0.8rem;
 }
 
@@ -163,14 +193,14 @@ a.language-container {
     outline: none;
     font-size: 1rem;
     font-weight: 700;
-    font-family: 'Lato';
+    font-family: 'LatoWeb';
 }
 
 .register-input-container > label {
     display: inline-block;
     color: #AEAEAE;
     font-weight: 700;
-    font-family: 'Lato';
+    font-family: 'LatoWeb';
     font-size: 0.8rem;
 }
 

@@ -2,7 +2,6 @@
 <html lang="pl">
     <head>
         <link rel="stylesheet" type="text/css" href="public/css/style.css">
-        <link type='text/css' href='http://fonts.googleapis.com/css?family=Lato:400,700' />
         <script src="https://kit.fontawesome.com/8a321b7213.js" crossorigin="anonymous"></script>
         <title>project_seven - Roulette</title>
         <meta charset="UTF-8">
