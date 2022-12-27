@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl">
     <head>
-        <link rel="stylesheet" type="text/css" href="public/css/style.css">
+        <link rel="stylesheet" type="text/css" href="public/css/roulette-style.css">
         <script src="https://kit.fontawesome.com/8a321b7213.js" crossorigin="anonymous"></script>
         <title>project_seven - Roulette</title>
         <meta charset="UTF-8">
@@ -27,15 +27,16 @@
                         <span class="language-text">PL</span>
                     </a>
                     <a href="">
-                        <i class="fa-solid fa-gift"></i>
+                        <img class="gift-svg" src="public/img/gift.svg">
                         <span class="claim-points-text">Odbierz punkty</span>
                     </a>
-                    <a href="/login">
-                        <span class="login-button">Zaloguj</span>
+                    <a class="login-button" href="/login">
+                        <span class="login-button_span">Zaloguj</span>
                     </a>
+                    <img class="burger-menu-svg" src="public/img/burger-menu.svg">
                 </div>
             </div>
-            <div class="saldo-container">
+            <!-- <div class="saldo-container">
                 <span class="saldo-text">Saldo: 0</span>
                 <img class="single-coin-svg" src="public/img/single-coin.svg">
             </div>
@@ -74,7 +75,7 @@
                         <span class="small-stats-dot"></span>
                         <span class="stat-value-text">0</span>
                 </div>
-            </div>
+            </div> -->
         </div>
     </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl">
     <head>
-        <link rel="stylesheet" type="text/css" href="public/css/style.css">
+        <link rel="stylesheet" type="text/css" href="public/css/login-style.css">
         <script src="https://kit.fontawesome.com/8a321b7213.js" crossorigin="anonymous"></script>
         <title>project_seven - Logowanie</title>
         <meta charset="UTF-8">

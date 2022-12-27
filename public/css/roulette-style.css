@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'LatoWeb';
+    src: url('../fonts/Lato-Regular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/Lato-Regular.woff2') format('woff2'); /* Modern Browsers */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+ 
+@font-face {
+    font-family: 'LatoWebLight';
+    src: url('fonts/Lato-Light.eot'); /* IE9 Compat Modes */
+    src: url('fonts/Lato-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/Lato-Light.woff2') format('woff2'); /* Modern Browsers */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'LatoWebItalic';
+    src: url('fonts/Lato-Italic.eot'); /* IE9 Compat Modes */
+    src: url('fonts/Lato-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/Lato-Italic.woff2') format('woff2'); /* Modern Browsers */
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    font-family: 'LatoWeb';
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1A1C24;
+}
+
+.polish-flag-svg {
+    height: 1.2rem;
+}
+
+.small-logo-svg {
+    height: 2rem;
+    margin-left: 1rem;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3.2rem;
+    background-color: #24252F;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav-buttons-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: flex-end;
+    margin-left: auto;
+    gap: 2rem;
+}
+
+.nav-buttons-container > a {
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.coinflip-svg, .roulette-svg {
+    height: 2.2rem;
+    color: #fff;
+}
+
+.gift-svg {
+    height: 1.6rem;
+    color: #fff;
+}
+
+.burger-menu-svg {
+    height: 2.2rem;
+    color: #fff;
+    margin-right: 2rem;
+}
+
+span {
+    font-size: 1rem;
+    justify-self: center;
+    align-self: center;
+    line-height: 1rem;
+}
+
+a {
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.roulette-game-container {
+    align-items: center;
+}
+
+.game-dot {
+    height: 100px;
+    width: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: -4px;
+}
