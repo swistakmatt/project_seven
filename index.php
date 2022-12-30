@@ -12,5 +12,3 @@ Routing::get('coinflip', 'DefaultController');
 Routing::get('recover', 'DefaultController');
 Routing::post('login', 'SecurityController');
 Routing::run($path);
-
-?>

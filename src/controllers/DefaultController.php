@@ -1,32 +1,37 @@
-<?php   
+<?php
 
 require_once 'AppController.php';
 
-class DefaultController extends AppController {
+class DefaultController extends AppController
+{
 
-    public function index() {
+    public function index()
+    {
         $this->render('login');
     }
 
-    public function login() {
+    public function login()
+    {
         $this->render('login');
     }
 
-    public function register() {
+    public function register()
+    {
         $this->render('register');
     }
 
-    public function roulette() {
+    public function roulette()
+    {
         $this->render('roulette');
     }
 
-    public function coinflip() {
+    public function coinflip()
+    {
         $this->render('coinflip');
     }
 
-    public function recover() {
+    public function recover()
+    {
         $this->render('recover');
     }
 }
-
-?>

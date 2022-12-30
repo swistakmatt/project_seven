@@ -1,22 +1,27 @@
-<?php   
+<?php
 
-class AppController {
+class AppController
+{
 
     private $request;
 
-    public function __construct(){
+    public function __construct()
+    {
         $this->request = $_SERVER['REQUEST_METHOD'];
     }
 
-    protected function isGet(): bool{
+    protected function isGet(): bool
+    {
         return $this->request === 'GET';
     }
 
-    protected function isPost(): bool {
+    protected function isPost(): bool
+    {
         return $this->request === 'POST';
     }
 
-    protected function render(string $template = null, array $variables = []) {
+    protected function render(string $template = null, array $variables = [])
+    {
         $templatePath = 'public/views/' . $template . '.php';
         $content = 'File not found';
         if (file_exists($templatePath)) {
@@ -27,7 +32,4 @@ class AppController {
         }
         print $content;
     }
-
 }
-
-?>

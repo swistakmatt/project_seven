@@ -1,269 +1,269 @@
 @font-face {
-    font-family: 'LatoWeb';
-    src: url('../fonts/Lato-Regular.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../fonts/Lato-Regular.woff2') format('woff2'); /* Modern Browsers */
-    font-style: normal;
-    font-weight: normal;
-    text-rendering: optimizeLegibility;
-}
- 
-@font-face {
-    font-family: 'LatoWebLight';
-    src: url('fonts/Lato-Light.eot'); /* IE9 Compat Modes */
-    src: url('fonts/Lato-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('fonts/Lato-Light.woff2') format('woff2'); /* Modern Browsers */
-    font-style: normal;
-    font-weight: normal;
-    text-rendering: optimizeLegibility;
+  font-family: "LatoWeb";
+  src: url("../fonts/Lato-Regular.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/Lato-Regular.woff2") format("woff2"); /* Modern Browsers */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
 }
 
 @font-face {
-    font-family: 'LatoWebItalic';
-    src: url('fonts/Lato-Italic.eot'); /* IE9 Compat Modes */
-    src: url('fonts/Lato-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('fonts/Lato-Italic.woff2') format('woff2'); /* Modern Browsers */
-    font-style: italic;
-    font-weight: normal;
-    text-rendering: optimizeLegibility;
+  font-family: "LatoWebLight";
+  src: url("fonts/Lato-Light.eot"); /* IE9 Compat Modes */
+  src: url("fonts/Lato-Light.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("fonts/Lato-Light.woff2") format("woff2"); /* Modern Browsers */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: "LatoWebItalic";
+  src: url("fonts/Lato-Italic.eot"); /* IE9 Compat Modes */
+  src: url("fonts/Lato-Italic.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("fonts/Lato-Italic.woff2") format("woff2"); /* Modern Browsers */
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
 }
 
 html {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 body {
-    margin: 0;
-    font-family: 'LatoWeb';
+  margin: 0;
+  font-family: "LatoWeb";
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #1A1C24;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #1a1c24;
 }
 
 a.language-container {
-    position: absolute;
-    top: 1rem;
-    left: 1.6rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: .4rem;
+  position: absolute;
+  top: 1rem;
+  left: 1.6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4rem;
 
-    background-color: #24252F;
-    color: #CBCBCB;
-    padding: .6rem;
-    border-radius: .4rem;
+  background-color: #24252f;
+  color: #cbcbcb;
+  padding: 0.6rem;
+  border-radius: 0.4rem;
 
-    font-weight: 800;
-    font-size: 1rem;
+  font-weight: 800;
+  font-size: 1rem;
 }
 
 .polish-flag-svg {
-    height: 1.2rem;
+  height: 1.2rem;
 }
 
 .small-logo-svg {
-    height: 2rem;
-    margin-left: 1rem;
+  height: 2rem;
+  margin-left: 1rem;
 }
 
 .logo-container {
-    width: 16rem;
-    background-color: #24252F;
-    margin: 2rem;
-    padding: 1.4rem;
-    border-radius: .8rem;
+  width: 16rem;
+  background-color: #24252f;
+  margin: 2rem;
+  padding: 1.4rem;
+  border-radius: 0.8rem;
 }
 
 .nav-container {
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3.2rem;
-    background-color: #24252F;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3.2rem;
+  background-color: #24252f;
+  align-items: center;
 }
 
 .login-text {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #DCDCDC;
-    margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #dcdcdc;
+  margin-bottom: 1rem;
 }
 
 .login-container {
-    background-color: #24252F;
-    padding: 1.6rem;
-    border-radius: .6rem;
+  background-color: #24252f;
+  padding: 1.6rem;
+  border-radius: 0.6rem;
 }
 
 .messages-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1.2rem;
-    font-weight: 700;
-    color: #ff5050;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  color: #ff5050;
 }
 
 .login-container > form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: .6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
 }
 
 .login-input-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: .6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.6rem;
 }
 
 .login-input-container > input {
-    background-color: #D8D8D8;
-    color: #24252F;
-    width: 16rem;
-    height: 2.4rem;
-    padding: .4rem .6rem;
-    border-radius: .4rem;
-    border: none;
-    outline: none;
-    font-size: 1rem;
-    font-weight: 700;
-    font-family: 'LatoWeb';
+  background-color: #d8d8d8;
+  color: #24252f;
+  width: 16rem;
+  height: 2.4rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.4rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: "LatoWeb";
 }
 
 .login-input-container > label {
-    display: inline;
-    color: #AEAEAE;
-    font-weight: 700;
-    font-family: 'LatoWeb';
-    font-size: 0.8rem;
+  display: inline;
+  color: #aeaeae;
+  font-weight: 700;
+  font-family: "LatoWeb";
+  font-size: 0.8rem;
 }
 
 .register-text {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #DCDCDC;
-    margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #dcdcdc;
+  margin-bottom: 1rem;
 }
 
 .register-container {
-    background-color: #24252F;
-    padding: 1.6rem;
-    border-radius: .6rem;
+  background-color: #24252f;
+  padding: 1.6rem;
+  border-radius: 0.6rem;
 }
 
 .register-container > form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: .6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
 }
 
 .register-input-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: .6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.6rem;
 }
 
 .register-input-container > input {
-    background-color: #D8D8D8;
-    color: #24252F;
-    width: 16rem;
-    height: 2.4rem;
-    padding: .4rem .6rem;
-    border-radius: .4rem;
-    border: none;
-    outline: none;
-    font-size: 1rem;
-    font-weight: 700;
-    font-family: 'LatoWeb';
+  background-color: #d8d8d8;
+  color: #24252f;
+  width: 16rem;
+  height: 2.4rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.4rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: "LatoWeb";
 }
 
 .register-input-container > label {
-    display: inline-block;
-    color: #AEAEAE;
-    font-weight: 700;
-    font-family: 'LatoWeb';
-    font-size: 0.8rem;
+  display: inline-block;
+  color: #aeaeae;
+  font-weight: 700;
+  font-family: "LatoWeb";
+  font-size: 0.8rem;
 }
 
 .checkbox-container {
-    display:flex;
-    flex-direction: row;
-    
-    gap: .4rem;
+  display: flex;
+  flex-direction: row;
 
-    color: #D9D9D9;
-    font-size: .8rem;
-    font-weight: 500;
-    line-height: 1.6rem;
-    text-align: center;
+  gap: 0.4rem;
+
+  color: #d9d9d9;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.6rem;
+  text-align: center;
 }
 
 #keep-logged {
-    accent-color: #02BF4D;
+  accent-color: #02bf4d;
 }
 
-button  {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #02c04e;
-    padding: 0;
-    border: none;
-    border-radius: .3rem;
-    height: 2.4rem;
-    width: 40%;
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #02c04e;
+  padding: 0;
+  border: none;
+  border-radius: 0.3rem;
+  height: 2.4rem;
+  width: 40%;
 }
 
 #register-button {
-    align-self: center;
-    margin-top: .6rem;
-    background-color: #D8D8D8;
+  align-self: center;
+  margin-top: 0.6rem;
+  background-color: #d8d8d8;
 }
 
 #submit-arrow {
-    display: inline-block;
-    height: 1.6rem;
+  display: inline-block;
+  height: 1.6rem;
 }
 
 .container > a {
-    color: #CBCBCB;
-    font-size: 0.7rem;
-    margin-top: 0.6rem;
-    text-transform: uppercase;
+  color: #cbcbcb;
+  font-size: 0.7rem;
+  margin-top: 0.6rem;
+  text-transform: uppercase;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .roulette-game-container {
-    align-items: center;
+  align-items: center;
 }
 
 .game-dot {
-    height: 100px;
-    width: 100px;
-    background-color: #fff;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: -4px;
-  }
+  height: 100px;
+  width: 100px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: -4px;
+}
