@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl">
     <head>
-        <link rel="stylesheet" type="text/css" href="public/css/style.css">
-        <link type='text/css' href='http://fonts.googleapis.com/css?family=Lato:400,700' />
+        <link rel="stylesheet" type="text/css" href="public/css/login-style.css">
         <script src="https://kit.fontawesome.com/8a321b7213.js" crossorigin="anonymous"></script>
         <title>project_seven - Logowanie</title>
         <meta charset="UTF-8">
@@ -45,7 +44,7 @@
                     <button type="submit"><img id="submit-arrow" src="public/img/submit-arrow.svg"></button>
                 </form>
             </div>
-            <a href="/recover-password">
+            <a href="/recover">
                 <span>Nie możesz się zalogować?</span>
             </a>
             <a href="/register">
