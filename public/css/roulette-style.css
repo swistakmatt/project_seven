@@ -1,40 +1,24 @@
-@font-face {
-  font-family: "LatoWeb";
-  src: url("../fonts/Lato-Regular.eot"); /* IE9 Compat Modes */
-  src: url("../fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/Lato-Regular.woff2") format("woff2"); /* Modern Browsers */
-  font-style: normal;
-  font-weight: normal;
-  text-rendering: optimizeLegibility;
-}
-
-@font-face {
-  font-family: "LatoWebLight";
-  src: url("fonts/Lato-Light.eot"); /* IE9 Compat Modes */
-  src: url("fonts/Lato-Light.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("fonts/Lato-Light.woff2") format("woff2"); /* Modern Browsers */
-  font-style: normal;
-  font-weight: normal;
-  text-rendering: optimizeLegibility;
-}
-
-@font-face {
-  font-family: "LatoWebItalic";
-  src: url("fonts/Lato-Italic.eot"); /* IE9 Compat Modes */
-  src: url("fonts/Lato-Italic.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("fonts/Lato-Italic.woff2") format("woff2"); /* Modern Browsers */
-  font-style: italic;
-  font-weight: normal;
-  text-rendering: optimizeLegibility;
-}
-
 html {
   font-size: 16px;
 }
 
 body {
   margin: 0;
-  font-family: "LatoWeb";
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  font-size: 1rem;
+  justify-self: center;
+  align-self: center;
 }
 
 .container {
@@ -65,6 +49,7 @@ body {
   background-color: #24252f;
   align-items: center;
   justify-content: flex-start;
+  z-index: 100;
 }
 
 .nav-buttons-games {
@@ -124,24 +109,9 @@ body {
   height: 1.6rem;
 }
 
-.burger-menu-svg {
-  height: 2.2rem;
-  margin-right: 1.2rem;
-  filter: brightness(0) saturate(100%) invert(75%) sepia(81%) saturate(629%)
-    hue-rotate(334deg) brightness(104%) contrast(106%);
-}
-
-span {
-  font-size: 1rem;
-  justify-self: center;
-  align-self: center;
-  line-height: 1rem;
-}
-
 .login-button {
   display: inline-block;
   background-color: #02bf4d;
-
   padding: 0.8rem;
   height: 1rem;
   border-radius: 0.4rem;
@@ -153,6 +123,129 @@ span {
   padding: 0.8rem;
   height: 1rem;
   border-radius: 0.4rem;
+}
+
+.signin-button {
+  display: flex;
+  background-color: #d8d8d8;
+  padding: 0.8rem;
+  height: 2rem;
+  width: 10rem;
+  border-radius: 0.4rem;
+}
+
+.ranking-button {
+  display: flex;
+  background-color: #2fa8ff;
+  padding: 0.8rem;
+  height: 2rem;
+  width: 10rem;
+  border-radius: 0.4rem;
+}
+
+.logout-button {
+  display: flex;
+  background-color: #ff2f2f;
+  padding: 0.8rem;
+  height: 2rem;
+  width: 10rem;
+  border-radius: 0.4rem;
+}
+
+.info-button {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.8rem;
+  height: 2rem;
+  width: 10rem;
+  border-radius: 0.4rem;
+}
+
+.claim-points_text,
+.login-button_text,
+.signin-button_text {
+  color: #000;
+  font-weight: 400;
+}
+
+.logout-button_text,
+.ranking-button_text {
+  color: #fff;
+  font-weight: 400;
+}
+
+.info-button_text {
+  color: #fec227;
+  font-weight: 400;
+}
+
+.burger-menu-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  margin-right: 1.2rem;
+}
+
+.burger-menu-line {
+  width: 1.5rem;
+  height: 0.2rem;
+  background-color: #fec227;
+}
+
+.burger-menu-line::before,
+.burger-menu-line::after {
+  content: "";
+  width: 1.5rem;
+  height: 0.2rem;
+  background-color: #fec227;
+}
+
+.burger-menu-line::before {
+  transform: translateY(-0.2rem);
+}
+
+.burger-menu-line::after {
+  transform: translateY(0.2rem);
+}
+
+.burger-nav {
+  display: none;
+}
+
+.burger-nav.open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 18rem;
+  height: calc(100vh - 3.6rem);
+  background-color: rgba(36, 37, 47, 0.9);
+  z-index: 99;
+  margin-top: 3.6rem;
+}
+
+.burger-nav-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.burger-nav-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: auto;
+  margin-bottom: 2rem;
+  gap: 2rem;
 }
 
 .saldo-container {
@@ -173,19 +266,6 @@ span {
 .saldo-amount {
   color: #fff;
   display: inline-block;
-  line-height: 1.5rem;
-}
-
-.claim-points_text,
-.login-button_text {
-  color: #000;
-  font-weight: 500;
-}
-
-a {
-  text-decoration: none;
-  justify-content: center;
-  align-items: center;
 }
 
 .roulette-game-container {
@@ -233,7 +313,6 @@ a {
 .hundred-throws-text,
 .stat-value-text {
   font-size: 0.8rem;
-  line-height: 2rem;
   margin-right: 0.5rem;
   color: #aeaeae;
   text-align: center;
@@ -249,7 +328,6 @@ a {
   background-color: #fff;
   border-radius: 50%;
   display: inline-block;
-  line-height: 2rem;
 }
 
 .stats-dot:nth-child(3n) {
@@ -266,7 +344,6 @@ a {
   background-color: #fff;
   border-radius: 50%;
   display: inline-block;
-  line-height: 2rem;
 }
 
 .small-stats-dot:nth-child(2) {
@@ -314,15 +391,19 @@ a {
   text-align: center;
   outline: none;
   margin: 0 0.5rem;
+  font-family: "Roboto", sans-serif;
 }
 
 .bet-input-button {
-  background-color: #d8d8d8;
-  border: 0;
-  border-radius: 0.2rem;
-  padding: 0.35rem;
+  background-color: #1a1c24;
+  color: #fff;
+  border: 1px solid #555555;
+  border-radius: 0.4rem;
+  padding: 0.35rem 0.6rem;
   text-transform: uppercase;
   font-size: 0.8rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
 .color-button {
@@ -343,13 +424,13 @@ a {
 
 .color-button-bet {
   font-size: 1.5rem;
-  line-height: 1.5rem;
+  font-family: "Roboto", sans-serif;
 }
 
 .color-button-multiplier {
   font-size: 0.8rem;
-  line-height: 0.8rem;
   margin-left: 3rem;
+  font-family: "Roboto", sans-serif;
 }
 
 .button-dot--green,
@@ -359,7 +440,6 @@ a {
   width: 2.6rem;
   border-radius: 50%;
   display: inline-block;
-  line-height: 2.6rem;
 }
 
 .button-dot--green {

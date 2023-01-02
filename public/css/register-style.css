@@ -1,40 +1,10 @@
-@font-face {
-  font-family: "LatoWeb";
-  src: url("../fonts/Lato-Regular.eot"); /* IE9 Compat Modes */
-  src: url("../fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/Lato-Regular.woff2") format("woff2"); /* Modern Browsers */
-  font-style: normal;
-  font-weight: normal;
-  text-rendering: optimizeLegibility;
-}
-
-@font-face {
-  font-family: "LatoWebLight";
-  src: url("fonts/Lato-Light.eot"); /* IE9 Compat Modes */
-  src: url("fonts/Lato-Light.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("fonts/Lato-Light.woff2") format("woff2"); /* Modern Browsers */
-  font-style: normal;
-  font-weight: normal;
-  text-rendering: optimizeLegibility;
-}
-
-@font-face {
-  font-family: "LatoWebItalic";
-  src: url("fonts/Lato-Italic.eot"); /* IE9 Compat Modes */
-  src: url("fonts/Lato-Italic.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("fonts/Lato-Italic.woff2") format("woff2"); /* Modern Browsers */
-  font-style: italic;
-  font-weight: normal;
-  text-rendering: optimizeLegibility;
-}
-
 html {
   font-size: 16px;
 }
 
 body {
   margin: 0;
-  font-family: "LatoWeb";
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
@@ -59,18 +29,16 @@ a.language-container {
   color: #cbcbcb;
   padding: 0.6rem;
   border-radius: 0.4rem;
+}
 
-  font-weight: 800;
+.language-text {
+  font-weight: 600;
   font-size: 1rem;
+  font-family: "Roboto", sans-serif;
 }
 
 .polish-flag-svg {
   height: 1.2rem;
-}
-
-.small-logo-svg {
-  height: 2rem;
-  margin-left: 1rem;
 }
 
 .logo-container {
@@ -95,7 +63,7 @@ a.language-container {
 
 .login-text {
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #dcdcdc;
   margin-bottom: 1rem;
 }
@@ -113,44 +81,6 @@ a.language-container {
   margin-bottom: 1.2rem;
   font-weight: 700;
   color: #ff5050;
-}
-
-.login-container > form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.login-input-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 0.6rem;
-}
-
-.login-input-container > input {
-  background-color: #d8d8d8;
-  color: #24252f;
-  width: 16rem;
-  height: 2.4rem;
-  padding: 0.4rem 0.6rem;
-  border-radius: 0.4rem;
-  border: none;
-  outline: none;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: "LatoWeb";
-}
-
-.login-input-container > label {
-  display: inline;
-  color: #aeaeae;
-  font-weight: 700;
-  font-family: "LatoWeb";
-  font-size: 0.8rem;
 }
 
 .register-text {
@@ -192,33 +122,17 @@ a.language-container {
   border: none;
   outline: none;
   font-size: 1rem;
-  font-weight: 700;
-  font-family: "LatoWeb";
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
 }
 
 .register-input-container > label {
   display: inline-block;
   color: #aeaeae;
-  font-weight: 700;
-  font-family: "LatoWeb";
-  font-size: 0.8rem;
-}
-
-.checkbox-container {
-  display: flex;
-  flex-direction: row;
-
-  gap: 0.4rem;
-
-  color: #d9d9d9;
-  font-size: 0.8rem;
   font-weight: 500;
-  line-height: 1.6rem;
-  text-align: center;
-}
-
-#keep-logged {
-  accent-color: #02bf4d;
+  font-size: 0.8rem;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: -0.4rem;
 }
 
 button {
@@ -253,17 +167,4 @@ button {
 
 a {
   text-decoration: none;
-}
-
-.roulette-game-container {
-  align-items: center;
-}
-
-.game-dot {
-  height: 100px;
-  width: 100px;
-  background-color: #fff;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: -4px;
 }
