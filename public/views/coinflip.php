@@ -48,21 +48,21 @@
     </div>
     <div class="burger-nav">
       <div class="burger-nav-top">
-        <a class="signin-button" href="/login">
-          <span class="signin-button_text">Stwórz konto</span>
+        <a class="register-button" href="/register">
+          <span class="register-button_text">Stwórz konto</span>
         </a>
-        <a class="ranking-button" href="/login">
+        <a class="ranking-button" href="/ranking">
           <span class="ranking-button_text">Ranking</span>
         </a>
-        <a class="logout-button" href="/login">
+        <a class="logout-button" href="">
           <span class="logout-button_text">Wyloguj</span>
         </a>
       </div>
       <div class="burger-nav-bottom">
-        <a class="info-button" href="/login">
+        <a class="info-button" href="">
           <span class="info-button_text">O nas</span>
         </a>
-        <a class="info-button" href="/login">
+        <a class="info-button" href="">
           <span class="info-button_text">Pomoc</span>
         </a>
       </div>

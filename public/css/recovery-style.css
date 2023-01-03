@@ -29,18 +29,16 @@ a.language-container {
   color: #cbcbcb;
   padding: 0.6rem;
   border-radius: 0.4rem;
+}
 
-  font-weight: 800;
+.language-text {
+  font-weight: 600;
   font-size: 1rem;
+  font-family: "Roboto", sans-serif;
 }
 
 .polish-flag-svg {
   height: 1.2rem;
-}
-
-.small-logo-svg {
-  height: 2rem;
-  margin-left: 1rem;
 }
 
 .logo-container {
@@ -63,14 +61,14 @@ a.language-container {
   align-items: center;
 }
 
-.login-text {
+.recovery-text {
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #dcdcdc;
   margin-bottom: 1rem;
 }
 
-.login-container {
+.recovery-container {
   background-color: #24252f;
   padding: 1.6rem;
   border-radius: 0.6rem;
@@ -81,19 +79,19 @@ a.language-container {
   justify-content: center;
   align-items: center;
   margin-bottom: 1.2rem;
-  font-weight: 700;
+  font-weight: 500;
   color: #ff5050;
 }
 
-.login-container > form {
+.recovery-container > form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.6rem;
+  gap: 1.5rem;
 }
 
-.login-input-container {
+.recovery-input-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -101,7 +99,7 @@ a.language-container {
   gap: 0.6rem;
 }
 
-.login-input-container > input {
+.recovery-input-container > input {
   background-color: #d8d8d8;
   color: #24252f;
   width: 16rem;
@@ -111,102 +109,30 @@ a.language-container {
   border: none;
   outline: none;
   font-size: 1rem;
-  font-weight: 700;
-  font-family: "LatoWeb";
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
 }
 
-.login-input-container > label {
+.recovery-input-container > label {
   display: inline;
   color: #aeaeae;
-  font-weight: 700;
-  font-family: "LatoWeb";
-  font-size: 0.8rem;
-}
-
-.register-text {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: #dcdcdc;
-  margin-bottom: 1rem;
-}
-
-.register-container {
-  background-color: #24252f;
-  padding: 1.6rem;
-  border-radius: 0.6rem;
-}
-
-.register-container > form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.register-input-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 0.6rem;
-}
-
-.register-input-container > input {
-  background-color: #d8d8d8;
-  color: #24252f;
-  width: 16rem;
-  height: 2.4rem;
-  padding: 0.4rem 0.6rem;
-  border-radius: 0.4rem;
-  border: none;
-  outline: none;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: "LatoWeb";
-}
-
-.register-input-container > label {
-  display: inline-block;
-  color: #aeaeae;
-  font-weight: 700;
-  font-family: "LatoWeb";
-  font-size: 0.8rem;
-}
-
-.checkbox-container {
-  display: flex;
-  flex-direction: row;
-
-  gap: 0.4rem;
-
-  color: #d9d9d9;
-  font-size: 0.8rem;
   font-weight: 500;
-  line-height: 1.6rem;
-  text-align: center;
-}
-
-#keep-logged {
-  accent-color: #02bf4d;
+  font-size: 0.8rem;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: -0.4rem;
 }
 
 button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #02c04e;
+  background-color: #fec227;
   padding: 0;
   border: none;
   border-radius: 0.3rem;
   height: 2.4rem;
   width: 40%;
-}
-
-#register-button {
-  align-self: center;
-  margin-top: 0.6rem;
-  background-color: #d8d8d8;
+  margin-bottom: 0.5rem;
 }
 
 #submit-arrow {
@@ -219,21 +145,10 @@ button {
   font-size: 0.7rem;
   margin-top: 0.6rem;
   text-transform: uppercase;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
 }
 
 a {
   text-decoration: none;
-}
-
-.roulette-game-container {
-  align-items: center;
-}
-
-.game-dot {
-  height: 100px;
-  width: 100px;
-  background-color: #fff;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: -4px;
 }

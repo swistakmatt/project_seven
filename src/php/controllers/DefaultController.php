@@ -30,8 +30,13 @@ class DefaultController extends AppController
         $this->render('coinflip');
     }
 
-    public function recover()
+    public function recovery()
     {
-        $this->render('recover');
+        $this->render('recovery');
+    }
+
+    public function ranking()
+    {
+        $this->render('ranking');
     }
 }

@@ -130,7 +130,7 @@ span {
   border-radius: 0.4rem;
 }
 
-.signin-button {
+.register-button {
   display: flex;
   background-color: #d8d8d8;
   padding: 0.8rem;
@@ -168,7 +168,7 @@ span {
 
 .claim-points_text,
 .login-button_text,
-.signin-button_text {
+.register-button_text {
   color: #000;
   font-weight: 400;
 }
