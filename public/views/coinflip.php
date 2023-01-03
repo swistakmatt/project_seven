@@ -40,9 +40,9 @@
           <span class="login-button_text">Zaloguj</span>
         </a>
         <div class="burger-menu-button">
-          <div class="burger-menu-line"></div>
-          <div class="burger-menu-line"></div>
-          <div class="burger-menu-line"></div>
+          <div class="burger-menu-line line1"></div>
+          <div class="burger-menu-line line2"></div>
+          <div class="burger-menu-line line3"></div>
         </div>
       </div>
     </div>
