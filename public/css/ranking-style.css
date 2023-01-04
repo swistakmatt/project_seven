@@ -272,7 +272,7 @@ span {
   flex-direction: column;
   align-self: center;
   justify-self: center;
-  width: 50%;
+  width: 45%;
   background-color: rgba(36, 37, 47, 0.9);
   border-radius: 1rem;
 }
@@ -296,8 +296,21 @@ span {
   box-sizing: border-box;
   height: 44em;
   overflow-y: auto;
+  scrollbar-width: thin;
   list-style-type: none;
   padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+  /* height: 2rem; */
+  background-color: rgba(48, 50, 63, 0.9);
+  overflow-x: auto;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fed14c;
+  border-radius: 0.4rem;
 }
 
 .ranking-container ul li {
@@ -306,6 +319,12 @@ span {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  font-weight: 300;
+  padding: 0.2rem 0;
+}
+
+.ranking-container ul li:nth-child(odd) {
+  background-color: rgba(48, 50, 63, 0.9);
 }
 
 .rank {
@@ -318,9 +337,13 @@ span {
 .name,
 .score {
   display: flex;
-  width: 40%;
+  width: 50%;
   justify-content: center;
   align-items: center;
+}
+
+.score {
+  width: 30%;
 }
 
 .ranking-info-container {
@@ -328,7 +351,7 @@ span {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  width: 55%;
   height: inherit;
 }
 
@@ -336,4 +359,9 @@ span {
   padding: 1rem 2rem;
   background-color: rgba(36, 37, 47, 0.9);
   border-radius: 1rem;
+}
+
+.stacked-coins-svg {
+  height: 16rem;
+  width: 16rem;
 }
