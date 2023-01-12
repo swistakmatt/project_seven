@@ -1,4 +1,4 @@
-![logo](public\img\png\project_seven_logo.png)
+![logo](https://github.com/swistakmatt/project_seven/blob/2fbbea86ad6bf81969a5dbe264983a2925a4b585/public/img/png/project_seven_logo.png)
 
 ---
 
