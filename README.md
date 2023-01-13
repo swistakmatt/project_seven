@@ -1,14 +1,21 @@
-![logo](https://github.com/swistakmatt/project_seven/blob/2fbbea86ad6bf81969a5dbe264983a2925a4b585/public/img/png/project_seven_logo.png)
+<p align="center"><img src="public\img\png\project_seven_logo.png"></p>
 
 ---
 
 # <p align="center">project_seven</p>
 
+<div align="center">
 Compete with others, gain ranking points and have fun!
+
+<br>
 
 Our website is currently under development, but you can already register and start playing!
 
-<p align="center"> Developed using the following technologies: </p>
+</div>
+
+---
+
+### <p align="center"> Developed using the following technologies: </p>
 
 <div align="center">
     <img src="public\img\png\html.png">
@@ -16,4 +23,5 @@ Our website is currently under development, but you can already register and sta
     <img src="public\img\png\js.png">
     <img src="public\img\png\php.png">
     <img src="public\img\png\postgresql.png">
+    <img src="public\img\png\docker.png">
 </div>
