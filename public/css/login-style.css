@@ -122,6 +122,11 @@ a.language-container {
   margin-bottom: -0.4rem;
 }
 
+.invalid-field {
+  background-color: #ff6c6c !important;
+  color: #fff !important;
+}
+
 .checkbox-container {
   display: flex;
   flex-direction: row;
@@ -150,6 +155,10 @@ button {
   height: 2.4rem;
   width: 40%;
   margin-bottom: 0.5rem;
+}
+
+.invalid-button {
+  background-color: #ff6c6c !important;
 }
 
 #submit-arrow {

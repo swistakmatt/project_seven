@@ -6,6 +6,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="public/css/ranking-style.css">
+  <script type="text/javascript" src="src/js/ranking.js" defer></script>
+  <script type="text/javascript" src="src/js/burger.js" defer></script>
   <script src="https://kit.fontawesome.com/8a321b7213.js" crossorigin="anonymous"></script>
   <title>project_seven - Ranking</title>
   <meta charset="UTF-8">
@@ -68,7 +70,6 @@
         </a>
       </div>
     </div>
-    <script src="../../src/js/ranking.js"></script>
     <div class="content-container">
       <div class="ranking-container">
         <div class="ranking-column-names">
@@ -85,7 +86,6 @@
       </div>
     </div>
   </div>
-  <script src="../../src/js/burger.js"></script>
 </body>
 
 </html>

@@ -6,6 +6,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="public/css/register-style.css">
+  <script type="text/javascript" src="src/js/register.js" defer></script>
   <script src="https://kit.fontawesome.com/8a321b7213.js" crossorigin="anonymous"></script>
   <title>project_seven - Rejestracja</title>
   <meta charset="UTF-8">
@@ -25,15 +26,17 @@
     </div>
     <span class="register-text">Stwórz konto</span>
     <div class="register-container">
-      <form>
+      <form action="register" method="POST">
         <div class="register-input-container">
+          <label for="nickname"> Nickname</label>
+          <input name="nickname" type="text" placeholder="Janek123">
           <label for="email"> Email</label>
           <input name="email" type="text" placeholder="jankowalski@email.com">
           <label for="password"> Hasło</label>
-          <input name="password" type="password" placeholder="123!słodkiekotki420">
+          <input name="password" type="password" placeholder="123!Słodkiekotki420">
           <label for="password"> Powtórz hasło</label>
-          <input name="password" type="password" placeholder="123!słodkiekotki420">
-          <button id="register-button"><img id="submit-arrow" src="public/img/submit-arrow.svg"></button>
+          <input name="confirm-password" type="password" placeholder="123!Słodkiekotki420">
+          <button type="submit"><img id="submit-arrow" src="public/img/submit-arrow.svg"></button>
         </div>
       </form>
     </div>

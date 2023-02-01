@@ -6,6 +6,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="public/css/login-style.css">
+  <script type="text/javascript" src="src/js/login.js" defer></script>
   <script src="https://kit.fontawesome.com/8a321b7213.js" crossorigin="anonymous"></script>
   <title>project_seven - Logowanie</title>
   <meta charset="UTF-8">
@@ -36,9 +37,9 @@
       <form action="login" method="POST">
         <div class="login-input-container">
           <label for="email"> Email</label>
-          <input name="email" type="text" placeholder="jankowalski@email.com">
+          <input name="email" type="text" placeholder="jankowalski@email.com" required>
           <label for="password"> Hasło</label>
-          <input name="password" type="password" placeholder="123!słodkiekotki420">
+          <input name="password" type="password" placeholder="123!Słodkiekotki420" required>
         </div>
         <div class="checkbox-container">
           <input type="checkbox" id="keep-logged" name="keep-logged" value="true">
