@@ -4,6 +4,7 @@ const email = form.querySelector('input[name="email"]');
 const password = form.querySelector('input[name="password"]');
 const confirmPassword = form.querySelector('input[name="confirm-password"]');
 const registerButton = form.querySelector('button[type="submit"]');
+const showPassword = form.querySelector('input[name="show-password"]');
 
 function validateNickname(nickname) {
   const re = /^[a-zA-Z0-9]{3,}$/;
@@ -65,5 +66,15 @@ confirmPassword.addEventListener('input', () => {
     checkField(confirmPassword, password.value === confirmPassword.value);
     validateForm();
   }, 1000);
+});
+
+showPassword.addEventListener('change', () => {
+  if (showPassword.checked) {
+    password.type = 'text';
+    confirmPassword.type = 'text';
+  } else {
+    password.type = 'password';
+    confirmPassword.type = 'password';
+  }
 });
 

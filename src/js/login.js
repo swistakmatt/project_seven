@@ -2,6 +2,7 @@ const form = document.querySelector('form');
 const email = form.querySelector('input[name="email"]');
 const password = form.querySelector('input[name="password"]');
 const loginButton = form.querySelector('button[type="submit"]');
+const showPassword = form.querySelector('input[name="show-password"]');
 
 function validateEmail(email) {
   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -42,4 +43,12 @@ password.addEventListener('input', () => {
     checkField(password, validatePassword(password.value));
     validateForm();
   }, 1000);
+});
+
+showPassword.addEventListener('change', () => {
+  if (showPassword.checked) {
+    password.type = 'text';
+  } else {
+    password.type = 'password';
+  }
 });

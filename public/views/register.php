@@ -26,16 +26,29 @@
     </div>
     <span class="register-text">Stwórz konto</span>
     <div class="register-container">
+      <div class="messages-container">
+        <?php
+        if (isset($messages)) {
+          foreach ($messages as $message) {
+            echo $message;
+          }
+        }
+        ?>
+      </div>
       <form action="register" method="POST">
         <div class="register-input-container">
           <label for="nickname"> Nickname</label>
-          <input name="nickname" type="text" placeholder="Janek123">
+          <input name="nickname" type="text" placeholder="Janek123" required>
           <label for="email"> Email</label>
-          <input name="email" type="text" placeholder="jankowalski@email.com">
+          <input name="email" type="text" placeholder="jankowalski@email.com" required>
           <label for="password"> Hasło</label>
-          <input name="password" type="password" placeholder="123!Słodkiekotki420">
+          <input name="password" type="password" placeholder="123!Słodkiekotki" required>
           <label for="password"> Powtórz hasło</label>
-          <input name="confirm-password" type="password" placeholder="123!Słodkiekotki420">
+          <input name="confirm-password" type="password" placeholder="123!Słodkiekotki" required>
+          <div class="show-password-container">
+            <input type="checkbox" id="show-password" name="show-password">
+            <label for="show-password"> Pokaż hasło</label>
+          </div>
           <button type="submit"><img id="submit-arrow" src="public/img/submit-arrow.svg"></button>
         </div>
       </form>

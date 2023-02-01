@@ -39,13 +39,17 @@
           <label for="email"> Email</label>
           <input name="email" type="text" placeholder="jankowalski@email.com" required>
           <label for="password"> Hasło</label>
-          <input name="password" type="password" placeholder="123!Słodkiekotki420" required>
+          <input name="password" type="password" placeholder="123!Słodkiekotki" required>
+          <div class="show-password-container">
+            <input type="checkbox" id="show-password" name="show-password">
+            <label for="show-password"> Pokaż hasło</label>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" id="keep-logged" name="keep-logged" value="true">
+            <label for="keep-logged"> Nie wylogowuj mnie</label>
+          </div>
+          <button type="submit"><img id="submit-arrow" src="public/img/submit-arrow.svg"></button>
         </div>
-        <div class="checkbox-container">
-          <input type="checkbox" id="keep-logged" name="keep-logged" value="true">
-          <label for="keep-logged"> Nie wylogowuj mnie</label>
-        </div>
-        <button type="submit"><img id="submit-arrow" src="public/img/submit-arrow.svg"></button>
       </form>
     </div>
     <a href="/recovery">

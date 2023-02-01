@@ -123,21 +123,29 @@ a.language-container {
 }
 
 .invalid-field {
-  background-color: #ff6c6c !important;
-  color: #fff !important;
+  background-color: #ffd059 !important;
+  color: #444444 !important;
 }
 
-.checkbox-container {
+.invalid-button {
+  background-color: #ffd059 !important;
+}
+
+.checkbox-container,
+.show-password-container {
   display: flex;
   flex-direction: row;
-
   gap: 0.4rem;
-
   color: #d9d9d9;
   font-size: 0.8rem;
   font-weight: 400;
   line-height: 1.6rem;
   text-align: center;
+  align-self: center;
+}
+
+#show-password {
+  accent-color: #fec227;
 }
 
 #keep-logged {
@@ -155,10 +163,7 @@ button {
   height: 2.4rem;
   width: 40%;
   margin-bottom: 0.5rem;
-}
-
-.invalid-button {
-  background-color: #ff6c6c !important;
+  align-self: center;
 }
 
 #submit-arrow {

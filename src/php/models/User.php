@@ -2,17 +2,15 @@
 
 class User
 {
+    private $nickname;
     private $email;
     private $password;
-    private $name;
-    private $surname;
 
-    public function __construct(string $email, string $password, string $name, string $surname)
+    public function __construct(string $nickname, string $email, string $password)
     {
+        $this->nickname = $nickname;
         $this->email = $email;
         $this->password = $password;
-        $this->name = $name;
-        $this->surname = $surname;
     }
 
     public function getEmail(): string
@@ -25,14 +23,9 @@ class User
         return $this->password;
     }
 
-    public function getName(): string
+    public function getNickname(): string
     {
-        return $this->name;
-    }
-
-    public function getSurname(): string
-    {
-        return $this->surname;
+        return $this->nickname;
     }
 
     public function setEmail(string $email)
@@ -45,13 +38,8 @@ class User
         $this->password = $password;
     }
 
-    public function setName(string $name)
+    public function setNickname(string $nickname)
     {
-        $this->name = $name;
-    }
-
-    public function setSurname(string $surname)
-    {
-        $this->surname = $surname;
+        $this->nickname = $nickname;
     }
 }

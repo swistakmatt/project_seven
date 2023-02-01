@@ -127,8 +127,8 @@ a.language-container {
 }
 
 .invalid-field {
-  background-color: #ff6c6c !important;
-  color: #fff !important;
+  background-color: #ffd059 !important;
+  color: #444444 !important;
 }
 
 .register-input-container > label {
@@ -152,11 +152,27 @@ button {
   margin-bottom: 0.5rem;
   align-self: center;
   margin-top: 0.9rem;
-  background-color: #d8d8d8;
+  background-color: #02c04e;
 }
 
 .invalid-button {
-  background-color: #ff6c6c !important;
+  background-color: #ffd059 !important;
+}
+
+.show-password-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.4rem;
+  color: #d9d9d9;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+  text-align: center;
+  align-self: center;
+}
+
+#show-password {
+  accent-color: #fec227;
 }
 
 #submit-arrow {

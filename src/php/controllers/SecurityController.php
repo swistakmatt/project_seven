@@ -6,15 +6,25 @@ require_once __DIR__ . '/../repository/UserRepository.php';
 
 class SecurityController extends AppController
 {
+
+    private $userRepository;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->userRepository = new UserRepository();
+    }
+
     public function login()
     {
-        $userRepository = new UserRepository();
-
         if (!$this->isPost()) {
             return $this->render('login');
         }
 
-        $user = $userRepository->getUser($_POST['email']);
+        $email = $_POST['email'];
+        $password = md5($_POST['password']);
+
+        $user = $this->userRepository->getUser($email);
 
         if (!$user) {
             return $this->render('login', ['messages' => ['Nie isnieje użytkownik o takim adresie email!']]);
@@ -33,5 +43,28 @@ class SecurityController extends AppController
 
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/roulette");
+    }
+
+    public function register()
+    {
+        if (!$this->isPost()) {
+            return $this->render('register');
+        }
+
+        $nickname = $_POST['nickname'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $confirmedPassword = $_POST['confirm-password'];
+
+
+        if ($password !== $confirmedPassword) {
+            return $this->render('register', ['messages' => ['Hasła nie są identyczne!']]);
+        }
+
+        $user = new User($nickname, $email, md5($password));
+
+        $this->userRepository->addUser($user);
+
+        return $this->render('login', ['messages' => ['Zostałeś zarejestrowany!']]);
     }
 }
