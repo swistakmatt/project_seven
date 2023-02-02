@@ -1,4 +1,4 @@
-create table if not exists "user"
+create table if not exists "users"
 (
     id_user  serial
         primary key,

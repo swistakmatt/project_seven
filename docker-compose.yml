@@ -20,7 +20,3 @@ services:
         image: php:fpm-alpine
         volumes:
             - .:/app/
-        
-networks:
-  internal:
-    driver: bridge

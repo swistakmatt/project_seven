@@ -44,28 +44,28 @@ nickname.addEventListener('input', () => {
   setTimeout(() => {
     checkField(nickname, validateNickname(nickname.value));
     validateForm();
-  }, 1000);
+  }, 200);
 });
 
 email.addEventListener('input', () => {
   setTimeout(() => {
     checkField(email, validateEmail(email.value));
     validateForm();
-  }, 1000);
+  }, 200);
 });
 
 password.addEventListener('input', () => {
   setTimeout(() => {
     checkField(password, validatePassword(password.value));
     validateForm();
-  }, 1000);
+  }, 200);
 });
 
 confirmPassword.addEventListener('input', () => {
   setTimeout(() => {
     checkField(confirmPassword, password.value === confirmPassword.value);
     validateForm();
-  }, 1000);
+  }, 200);
 });
 
 showPassword.addEventListener('change', () => {
