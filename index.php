@@ -14,5 +14,6 @@ Routing::get('ranking', 'DefaultController');
 Routing::post('login', 'SecurityController');
 Routing::post('register', 'SecurityController');
 Routing::post('recovery', 'SecurityController');
+Routing::get('logout', 'SecurityController');
 
 Routing::run($path);

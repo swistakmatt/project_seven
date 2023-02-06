@@ -22,18 +22,22 @@ class UserRepository extends Repository
         return new User(
             $user['nickname'],
             $user['email'],
-            $user['password']
+            $user['password'],
+            $user['balance']
         );
     }
 
     public function addUser(User $user): void
     {
+        date_default_timezone_set("Europe/Warsaw");
+
         $connection = $this->database->connect();
-        $statement = $connection->prepare('INSERT INTO users (nickname, email, password) VALUES (?, ?, ?)');
+        $statement = $connection->prepare('INSERT INTO users (nickname, email, password, created) VALUES (?, ?, ?, ?)');
         $statement->execute([
             $user->getNickname(),
             $user->getEmail(),
-            $user->getPassword()
+            $user->getPassword(),
+            date("Y-m-d H:i:s")
         ]);
     }
 }

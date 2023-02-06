@@ -109,6 +109,13 @@ span {
   height: 1.6rem;
 }
 
+.logged-in-text {
+  display: inline-block;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 .login-button {
   display: inline-block;
   background-color: #02bf4d;

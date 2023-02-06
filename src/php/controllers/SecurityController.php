@@ -3,17 +3,19 @@
 require_once 'AppController.php';
 require_once __DIR__ . '/../models/User.php';
 require_once __DIR__ . '/../repository/UserRepository.php';
+require_once __DIR__ . '/../controllers/SessionController.php';
 
 class SecurityController extends AppController
 {
 
     private $userRepository;
+    private $sessionController;
 
     public function __construct()
     {
         parent::__construct();
         $this->userRepository = new UserRepository();
-        session_start();
+        $this->sessionController = new SessionController();
     }
 
     public function login()
@@ -24,7 +26,7 @@ class SecurityController extends AppController
         }
 
         $email = $_POST['email'];
-        $password = md5($_POST['password']);
+        $password = $_POST['password'];
 
         $user = $this->userRepository->getUser($email);
 
@@ -36,15 +38,18 @@ class SecurityController extends AppController
             return $this->render('login', ['messages' => ['Nie isnieje użytkownik o takim adresie email!']]);
         }
 
-        if ($user->getPassword() !== $password) {
+        $verify = password_verify($password, $user->getPassword());
+
+        if (!$verify) {
             return $this->render('login', ['messages' => ['Podano nieprawidłowe hasło!']]);
         }
 
-        $_SESSION['logged_in'] = true;
-        // $_SESSION['user_id'] = $user_id;
-
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/roulette");
+
+        $this->sessionController->set('nickname', $user->getNickname());
+        $this->sessionController->set('email', $user->getEmail());
+        $this->sessionController->set('balance', $user->getBalance());
     }
 
     public function register()
@@ -58,9 +63,8 @@ class SecurityController extends AppController
         $password = $_POST['password'];
         $confirmedPassword = $_POST['confirm-password'];
 
-
         if ($password === $confirmedPassword) {
-            $user = new User($nickname, $email, md5($password));
+            $user = new User($nickname, $email, password_hash($password, PASSWORD_BCRYPT));
 
             $this->userRepository->addUser($user);
 
@@ -70,5 +74,9 @@ class SecurityController extends AppController
 
     public function logout()
     {
+        $this->sessionController->clear();
+        $this->sessionController->destroy();
+        $url = "http://$_SERVER[HTTP_HOST]";
+        header("Location: {$url}/roulette");
     }
 }

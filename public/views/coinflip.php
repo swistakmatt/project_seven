@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -37,9 +38,14 @@
           <img class="gift-svg" src="public/img/gift.svg" />
           <span class="claim-points_text">Odbierz punkty</span>
         </a>
-        <a class="login-button" href="/login">
-          <span class="login-button_text">Zaloguj</span>
-        </a>
+        <?php if (isset($_SESSION['email'])) : ?>
+          <span class="logged-in-text">Zalogowany jako: <?php echo $_SESSION['nickname']; ?></span>
+        <?php endif; ?>
+        <?php if (!isset($_SESSION['email'])) : ?>
+          <a class="login-button" href="/login">
+            <span class="login-button_text">Zaloguj</span>
+          </a>
+        <?php endif; ?>
         <div class="burger-menu-button">
           <div class="burger-menu-line line1"></div>
           <div class="burger-menu-line line2"></div>
@@ -49,15 +55,19 @@
     </div>
     <div class="burger-nav">
       <div class="burger-nav-top">
-        <a class="register-button" href="/register">
-          <span class="register-button_text">Stwórz konto</span>
-        </a>
+        <?php if (!isset($_SESSION['email'])) : ?>
+          <a class="register-button" href="/register">
+            <span class="register-button_text">Stwórz konto</span>
+          </a>
+        <?php endif; ?>
         <a class="ranking-button" href="/ranking">
           <span class="ranking-button_text">Ranking</span>
         </a>
-        <a class="logout-button" href="">
-          <span class="logout-button_text">Wyloguj</span>
-        </a>
+        <?php if (isset($_SESSION['email'])) : ?>
+          <a class="logout-button" href="/logout">
+            <span class="logout-button_text">Wyloguj</span>
+          </a>
+        <?php endif; ?>
       </div>
       <div class="burger-nav-bottom">
         <a class="info-button" href="">
@@ -70,7 +80,7 @@
     </div>
     <div class="saldo-container">
       <span class="saldo-text">Saldo:</span>
-      <span class="saldo-amount">21370</span>
+      <span class="saldo-amount"><?php echo $_SESSION['balance']; ?></span>
       <img class="single-coin-svg" src="public/img/single-coin.svg" />
     </div>
     <form class="bet-form" action="/coinflip" method="POST">

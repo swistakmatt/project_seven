@@ -5,12 +5,14 @@ class User
     private $nickname;
     private $email;
     private $password;
+    private $balance;
 
-    public function __construct(string $nickname, string $email, string $password)
+    public function __construct(string $nickname, string $email, string $password, int $balance = 0)
     {
         $this->nickname = $nickname;
         $this->email = $email;
         $this->password = $password;
+        $this->balance = $balance;
     }
 
     public function getEmail(): string
@@ -28,6 +30,11 @@ class User
         return $this->nickname;
     }
 
+    public function getBalance(): int
+    {
+        return $this->balance;
+    }
+
     public function setEmail(string $email)
     {
         $this->email = $email;
@@ -41,5 +48,10 @@ class User
     public function setNickname(string $nickname)
     {
         $this->nickname = $nickname;
+    }
+
+    public function setBalance(int $balance)
+    {
+        $this->balance = $balance;
     }
 }
