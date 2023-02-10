@@ -39,4 +39,14 @@ class DefaultController extends AppController
     {
         $this->render('ranking');
     }
+
+    public function points()
+    {
+        $this->render('points');
+    }
+
+    public function admin()
+    {
+        $this->render('admin');
+    }
 }

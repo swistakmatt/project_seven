@@ -50,6 +50,7 @@ class SecurityController extends AppController
         $this->sessionController->set('nickname', $user->getNickname());
         $this->sessionController->set('email', $user->getEmail());
         $this->sessionController->set('balance', $user->getBalance());
+        $this->sessionController->set('role', $user->getRole());
     }
 
     public function register()

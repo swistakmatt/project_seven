@@ -110,6 +110,13 @@ span {
   border-radius: 0.4rem;
 }
 
+.logged-in-text {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 .gift-button {
   display: inline-block;
   background-color: #fed14c;

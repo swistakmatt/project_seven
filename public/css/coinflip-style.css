@@ -28,6 +28,16 @@ span {
   background: #1a1c24;
 }
 
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  justify-self: center;
+  min-height: 80vh;
+}
+
 .polish-flag-svg {
   height: 1.2rem;
 }
@@ -304,6 +314,15 @@ span {
   font-weight: 400;
 }
 
+.messages-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  font-weight: 500;
+  color: #ff5050;
+}
+
 .bet-form {
   display: flex;
   flex-direction: column;
@@ -416,11 +435,24 @@ span {
 }
 
 .coinflip-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 20rem;
-  height: 20rem;
+  height: 6rem;
   background-color: rgba(255, 255, 255, 0.06);
   border-radius: 1rem;
   margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+#coinflip-result-text {
+  color: #fec227;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 4rem;
 }
 
 input[type="number"] {

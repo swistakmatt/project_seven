@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="public/css/coinflip-style.css" />
   <script type="text/javascript" src="src/js/burger.js" defer></script>
+  <script type="text/javascript" src="src/js/coinflip.js" defer></script>
   <script src="https://kit.fontawesome.com/8a321b7213.js" crossorigin="anonymous"></script>
   <title>project_seven - Rzut monetą</title>
   <meta charset="UTF-8" />
@@ -34,7 +35,7 @@
           <img class="polish-flag-svg" src="public/img/polish-flag.svg" />
           <span class="language_text">PL</span>
         </a>
-        <a class="gift-button" href="">
+        <a class="gift-button" href="/points">
           <img class="gift-svg" src="public/img/gift.svg" />
           <span class="claim-points_text">Odbierz punkty</span>
         </a>
@@ -83,35 +84,48 @@
       <span class="saldo-amount"><?php echo $_SESSION['balance']; ?></span>
       <img class="single-coin-svg" src="public/img/single-coin.svg" />
     </div>
-    <form class="bet-form" action="/coinflip" method="POST">
-      <div class="bet-form-amount">
-        <img class="stacked-coins-svg" src="public/img/stacked-coins.svg" />
-        <input class="bet-input" type="number" name="bet" />
-        <button class="bet-input-button">Wyczyść</button>
-        <button class="bet-input-button">+1</button>
-        <button class="bet-input-button">+10</button>
-        <button class="bet-input-button">+100</button>
-        <button class="bet-input-button">1/2</button>
-        <button class="bet-input-button">2x</button>
-        <button class="bet-input-button">Wszystko</button>
+    <div class="game-container">
+      <div class="messages-container">
+        <?php
+        if (isset($messages)) {
+          foreach ($messages as $message) {
+            echo $message;
+          }
+        }
+        ?>
       </div>
-      <div class="bet-form-options">
-        <div class="form-answer">
-          <input type="radio" name="side" value="heads" id="heads" required />
-          <label for="heads" class="coinflip-labels">
-            <img class="heads-svg" src="public/img/coinflip-coin.svg" />
-          </label>
+      <form class="bet-form" action="/submitBet" method="POST">
+        <div class="bet-form-amount">
+          <img class="stacked-coins-svg" src="public/img/stacked-coins.svg" />
+          <input class="bet-input" id="bet-input" type="number" name="bet" value="0" />
+          <div class="bet-input-button" onclick="changeValue(0)">Wyczyść</div>
+          <div class="bet-input-button" onclick="incrementValue(1)">+1</div>
+          <div class="bet-input-button" onclick="incrementValue(10)">+10</div>
+          <div class="bet-input-button" onclick="incrementValue(100)">+100</div>
+          <div class="bet-input-button" onclick="halfValue()">1/2</div>
+          <div class="bet-input-button" onclick="doubleValue()">2x</div>
+          <div class="bet-input-button" onclick="changeValue(<?php echo $_SESSION['balance']; ?>)">Wszystko</div>
         </div>
-        <div class="form-answer">
-          <input type="radio" name="side" value="tails" id="tails" required />
-          <label for="tails" class="coinflip-labels">
-            <img class="tails-svg" src="public/img/coinflip-coin.svg" />
-          </label>
+        <div class="bet-form-options">
+          <div class="form-answer">
+            <input type="radio" name="side" value="heads" id="heads" required />
+            <label for="heads" class="coinflip-labels">
+              <img class="heads-svg" src="public/img/coinflip-coin.svg" />
+            </label>
+          </div>
+          <div class="form-answer">
+            <input type="radio" name="side" value="tails" id="tails" required />
+            <label for="tails" class="coinflip-labels">
+              <img class="tails-svg" src="public/img/coinflip-coin.svg" />
+            </label>
+          </div>
         </div>
+        <button class="bet-form-submit" id="bet-form-submit" type="submit">Obstaw</button>
+      </form>
+      <div class="coinflip-result" id="coinflip-result">
+        <span id="coinflip-result-text"></span>
       </div>
-      <button class="bet-form-submit" type="submit">Obstaw</button>
-    </form>
-    <div class="coinflip-result"></div>
+    </div>
   </div>
 </body>
 

@@ -2,6 +2,7 @@
 
 require_once 'src/php/controllers/DefaultController.php';
 require_once 'src/php/controllers/SecurityController.php';
+require_once 'src/php/controllers/CoinflipController.php';
 
 class Routing
 {

@@ -10,10 +10,14 @@ Routing::get('roulette', 'DefaultController');
 Routing::get('coinflip', 'DefaultController');
 Routing::get('recovery', 'DefaultController');
 Routing::get('ranking', 'DefaultController');
+Routing::get('logout', 'SecurityController');
+Routing::get('points', 'DefaultController');
+Routing::get('admin', 'DefaultController');
+
 
 Routing::post('login', 'SecurityController');
+Routing::post('submitBet', 'CoinflipController');
 Routing::post('register', 'SecurityController');
 Routing::post('recovery', 'SecurityController');
-Routing::get('logout', 'SecurityController');
 
 Routing::run($path);
