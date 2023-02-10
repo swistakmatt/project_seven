@@ -25,14 +25,16 @@ class CoinflipController extends AppController
     {
         $email = $this->sessionController->get('email');
         if ($email == null) {
-            return $this->render('coinflip', ['messages' => ['Musisz się zalogować!']]);
+            print('Musisz się zalogować!');
+            return;
         }
         $user = $this->userRepository->getUser($email);
         $balance = $this->userBalanceRepository->getBalance($user->getEmail());
         $amount = $_GET['bet'];
         $choice = $_GET['side'];
         if ($balance < $amount) {
-            return $this->render('coinflip', ['messages' => ['Nie posiadasz tylu punktów na swoim koncie!']]);
+            print('Nie masz wystarczającej ilości punktów!');
+            return;
         }
         $draw = rand(0, 1) == 0 ? 'heads' : 'tails';
         if ($draw == $choice) {

@@ -19,5 +19,6 @@ Routing::post('login', 'SecurityController');
 Routing::post('submitBet', 'CoinflipController');
 Routing::post('register', 'SecurityController');
 Routing::post('recovery', 'SecurityController');
+Routing::post('claimPoints', 'ClaimController');
 
 Routing::run($path);

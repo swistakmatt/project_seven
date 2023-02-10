@@ -42,4 +42,20 @@ class UserRepository extends Repository
             date("Y-m-d H:i:s")
         ]);
     }
+
+    public function getUserId(string $email): ?string
+    {
+        $connection = $this->database->connect();
+        $statement = $connection->prepare('SELECT id_user FROM users WHERE email = :email');
+        $statement->bindParam(':email', $email, PDO::PARAM_STR);
+        $statement->execute();
+
+        $id_user = $statement->fetch(PDO::FETCH_ASSOC);
+
+        if ($id_user == false) {
+            return null;
+        }
+
+        return $id_user['id_user'];
+    }
 }

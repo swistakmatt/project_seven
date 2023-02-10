@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="public/css/points-style.css">
   <script type="text/javascript" src="src/js/burger.js" defer></script>
+  <script type="text/javascript" src="src/js/points.js" defer></script>
   <script src="https://kit.fontawesome.com/8a321b7213.js" crossorigin="anonymous"></script>
   <title>project_seven - Punkty</title>
   <meta charset="UTF-8">
@@ -89,10 +90,12 @@
         }
         ?>
         <?php if (isset($_SESSION['email'])) : ?>
-          <form class="redeem-points-form" action="/points" method="POST">
-            <span class="redeem-points-form--date"></span>
+          <form class="redeem-points-form" action="claimPoints" method="POST">
             <button class="redeem-points-form--button" type="submit" name="redeem_points">Odbierz punkty</button>
           </form>
+          <div class="claim-result" id="claim-result">
+            <span id="claim-result-text"></span>
+          </div>
         <?php endif; ?>
         <?php if (!isset($_SESSION['email'])) : ?>
           <span class="points-warning">Aby korzystać z tej funkcji musisz być zalogowany</span>
