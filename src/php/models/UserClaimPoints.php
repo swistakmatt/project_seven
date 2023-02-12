@@ -3,13 +3,13 @@
 class UserClaimPoints
 {
     private $id_claim;
-    private $timestamp;
+    private $claim_timestamp;
     private $id_user;
 
-    public function __construct(int $id_user, int $id_claim, string $timestamp)
+    public function __construct(int $id_user, string $timestamp = '0', int $id_claim = 0)
     {
         $this->id_claim = $id_claim;
-        $this->timestamp = $timestamp;
+        $this->claim_timestamp = $timestamp;
         $this->id_user = $id_user;
     }
 
@@ -25,7 +25,7 @@ class UserClaimPoints
 
     public function getTimestamp(): string
     {
-        return $this->timestamp;
+        return $this->claim_timestamp;
     }
 
     public function setIdUser(int $id_user)
@@ -40,6 +40,6 @@ class UserClaimPoints
 
     public function setTimestamp(string $timestamp)
     {
-        $this->timestamp = $timestamp;
+        $this->claim_timestamp = $timestamp;
     }
 }

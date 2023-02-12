@@ -26,19 +26,13 @@ class ClaimController extends AppController
 
         date_default_timezone_set('Europe/Warsaw');
 
-        $email = $this->sessionController->get('email');
-        $user = $this->userRepository->getUser($email);
-        $timestamp = $this->userClaimPointsRepository->getTimestamp($user->getId());
-        $currentTimestamp = date('Y-m-d H:i:s');
-        if ($timestamp == null) {
-            $this->userClaimPointsRepository->setTimestamp($user->getId(), $currentTimestamp);
-            return true;
-        }
-        $timestamp = strtotime($timestamp);
-        $currentTimestamp = strtotime($currentTimestamp);
+        $user_id = $this->userRepository->getUser($this->sessionController->get('email'))->getId();
+        $timestamp = strtotime($this->userClaimPointsRepository->getClaimPoints($user_id)->getTimestamp());
+        $currentTimestamp = strtotime(date('Y-m-d H:i:s'));
+
         $difference = $currentTimestamp - $timestamp;
         if ($difference >= 3600) {
-            $this->userClaimPointsRepository->setTimestamp($user->getId(), $currentTimestamp);
+            $this->userClaimPointsRepository->setClaimPoints($user_id);
             return true;
         }
         return false;
@@ -51,15 +45,14 @@ class ClaimController extends AppController
             print('Musisz się zalogować!');
             return;
         }
-        $user = $this->userRepository->getUser($email);
-        $balance = $this->userBalanceRepository->getBalance($user->getEmail());
 
-        if (!$this->checkClaimAvailability()) {
-            print('Nie możesz jeszcze odebrać punktów!');
-        } else {
-            $this->userBalanceRepository->setBalance($user->getEmail(), $balance + 1000);
+        if ($this->checkClaimAvailability()) {
+            $balance = $this->userBalanceRepository->getBalance($email);
+            $this->userBalanceRepository->setBalance($email, $balance + 1000);
             $this->sessionController->set('balance', $balance + 1000);
             print('Otrzymałeś 1000 punktów!');
+        } else {
+            print('Nie możesz jeszcze odebrać punktów!');
         }
     }
 }

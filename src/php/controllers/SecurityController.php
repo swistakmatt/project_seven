@@ -74,7 +74,11 @@ class SecurityController extends AppController
             $user = new User($nickname, $email, password_hash($password, PASSWORD_BCRYPT), 1000);
 
             $this->userRepository->addUser($user);
-            $this->userClaimPointsRepository->setTimestamp($this->userRepository->getUserId($email), date('Y-m-d H:i:s'));
+
+            $user_id = $this->userRepository->getUser($email)->getId();
+            $userClaim = new UserClaimPoints($user_id);
+            $this->userClaimPointsRepository->addClaimPoints($userClaim);
+            $this->userBalanceRepository->setBalance($email, 1000);
 
             return $this->render('login', ['messages' => ['Zostałeś zarejestrowany!']]);
         }

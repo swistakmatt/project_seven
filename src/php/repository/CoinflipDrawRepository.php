@@ -45,7 +45,7 @@ class CoinflipDrawRepository extends Repository
         date_default_timezone_set("Europe/Warsaw");
 
         $connection = $this->database->connect();
-        $statement = $connection->prepare('INSERT INTO coinflip_draws (id_user, timestamp, amount, result, side) VALUES (?, ?, ?, ?, ?)');
+        $statement = $connection->prepare('INSERT INTO coinflip_draws (id_user, coinflip_timestamp, amount, result, side) VALUES (?, ?, ?, ?, ?)');
         $statement->execute([
             $draw->getIdUser(),
             date("Y-m-d H:i:s"),
