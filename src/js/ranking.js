@@ -1,22 +1,23 @@
-async function getRankingData() {
-    try {
-      const response = await fetch('/public/ranking-data.json');
+  async function getRankingData(url) {
+    const response = await fetch(url);
+
+    if (response.ok) {
       const data = await response.json();
       return data;
-    } catch (error) {
-      console.error(error);
+    } else {
+      throw new Error('Something went wrong');
     }
   }
   
-  getRankingData().then(data => {
+  getRankingData('/rankingData').then(data => {
     const rankingList = document.querySelector('.ranking-container ul');
-    data.forEach(player => {
-      const listItem = document.createElement('li');
-      listItem.innerHTML = `
-        <span class="rank">${player.rank}</span>
-        <span class="name">${player.name}</span>
-        <span class="score">${player.score}</span>
+    data.forEach((item, index) => {
+      const rankingItem = document.createElement('li');
+      rankingItem.innerHTML = `
+        <span class="rank">${index + 1}</span>
+        <span class="name">${item.nickname}</span>
+        <span class="score">${item.balance}</span>
       `;
-      rankingList.appendChild(listItem);
+      rankingList.appendChild(rankingItem);
     });
   });

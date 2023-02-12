@@ -4,6 +4,7 @@ require_once 'src/php/controllers/DefaultController.php';
 require_once 'src/php/controllers/SecurityController.php';
 require_once 'src/php/controllers/CoinflipController.php';
 require_once 'src/php/controllers/ClaimController.php';
+require_once 'src/php/controllers/RankingController.php';
 
 class Routing
 {

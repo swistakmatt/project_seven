@@ -27,7 +27,7 @@ class ClaimController extends AppController
         date_default_timezone_set('Europe/Warsaw');
 
         $user_id = $this->userRepository->getUser($this->sessionController->get('email'))->getId();
-        $timestamp = strtotime($this->userClaimPointsRepository->getClaimPoints($user_id)->getTimestamp());
+        $timestamp = strtotime($this->userClaimPointsRepository->getTimestamp($user_id));
         $currentTimestamp = strtotime(date('Y-m-d H:i:s'));
 
         $difference = $currentTimestamp - $timestamp;

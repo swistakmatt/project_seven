@@ -1,5 +1,7 @@
+try {
 const form = document.querySelector('form');
 const button = form.querySelector('button[type="submit"]');
+
 
 button.addEventListener('click', async (e) => {
   e.preventDefault();
@@ -13,3 +15,5 @@ button.addEventListener('click', async (e) => {
   const data = await response.text();
   console.log(data);
 });
+} catch (e) {
+}

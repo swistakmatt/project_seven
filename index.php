@@ -13,6 +13,7 @@ Routing::get('ranking', 'DefaultController');
 Routing::get('logout', 'SecurityController');
 Routing::get('points', 'DefaultController');
 Routing::get('admin', 'DefaultController');
+Routing::get('rankingData', 'RankingController');
 
 
 Routing::post('login', 'SecurityController');
