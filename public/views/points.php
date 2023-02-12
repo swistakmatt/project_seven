@@ -70,6 +70,11 @@
             <span class="logout-button_text">Wyloguj</span>
           </a>
         <?php endif; ?>
+        <?php if ($_SESSION['role'] == 1) : ?>
+          <a class="admin-button" href="/admin">
+            <span class="admin-button_text">Panel administratora</span>
+          </a>
+        <?php endif; ?>
       </div>
       <div class="burger-nav-bottom">
         <a class="info-button" href="">
@@ -82,13 +87,6 @@
     </div>
     <div class="content-container">
       <div class="redeem-points-container">
-        <?php
-        if (isset($messages)) {
-          foreach ($messages as $message) {
-            echo $message;
-          }
-        }
-        ?>
         <?php if (isset($_SESSION['email'])) : ?>
           <form class="redeem-points-form" action="claimPoints" method="POST">
             <button class="redeem-points-form--button" type="submit" name="redeem_points">Odbierz punkty</button>

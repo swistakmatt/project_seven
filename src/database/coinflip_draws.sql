@@ -5,7 +5,7 @@ create table if not exists "coinflip_draws"
     coinflip_timestamp timestamp not null,
     id_user            integer   not null
         constraint id_user
-            references public.users,
+            references users,
     result             boolean   not null,
     amount             integer   not null,
     side               text      not null

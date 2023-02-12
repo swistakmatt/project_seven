@@ -152,6 +152,15 @@ span {
   border-radius: 0.4rem;
 }
 
+.admin-button {
+  display: flex;
+  background-color: #ff2fa1;
+  padding: 0.8rem;
+  height: 2rem;
+  width: 10rem;
+  border-radius: 0.4rem;
+}
+
 .info-button {
   display: flex;
   background-color: rgba(255, 255, 255, 0.1);
@@ -169,7 +178,8 @@ span {
 }
 
 .logout-button_text,
-.ranking-button_text {
+.ranking-button_text,
+.admin-button_text {
   color: #fff;
   font-weight: 400;
 }
@@ -267,9 +277,16 @@ span {
 
 .content-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  justify-self: center;
+
+  min-height: 80vh;
   width: 80vw;
   color: #fff;
+
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
@@ -284,4 +301,48 @@ span {
 ::-webkit-scrollbar-thumb {
   background-color: #fed14c;
   border-radius: 0.4rem;
+}
+
+.redeem-points-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.redeem-points-form--button {
+  width: fit-content;
+  align-self: center;
+  background-color: #333541;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.4rem;
+  border: 0;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.claim-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  height: 6rem;
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 1rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+#claim-result-text {
+  color: #87f76c;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 4rem;
 }

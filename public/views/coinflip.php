@@ -69,6 +69,11 @@
             <span class="logout-button_text">Wyloguj</span>
           </a>
         <?php endif; ?>
+        <?php if ($_SESSION['role'] == 1) : ?>
+          <a class="admin-button" href="/admin">
+            <span class="admin-button_text">Panel administratora</span>
+          </a>
+        <?php endif; ?>
       </div>
       <div class="burger-nav-bottom">
         <a class="info-button" href="">

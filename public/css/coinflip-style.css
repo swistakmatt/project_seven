@@ -174,6 +174,15 @@ span {
   border-radius: 0.4rem;
 }
 
+.admin-button {
+  display: flex;
+  background-color: #ff2fa1;
+  padding: 0.8rem;
+  height: 2rem;
+  width: 10rem;
+  border-radius: 0.4rem;
+}
+
 .info-button {
   display: flex;
   background-color: rgba(255, 255, 255, 0.1);
@@ -191,7 +200,8 @@ span {
 }
 
 .logout-button_text,
-.ranking-button_text {
+.ranking-button_text,
+.admin-button_text {
   color: #fff;
   font-weight: 400;
 }

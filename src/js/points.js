@@ -13,7 +13,9 @@ button.addEventListener('click', async (e) => {
     }
   });
   const data = await response.text();
-  console.log(data);
+  
+  const result = document.getElementById('claim-result-text');
+  result.innerHTML = data;
 });
 } catch (e) {
 }
