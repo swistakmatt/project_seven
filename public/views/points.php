@@ -88,6 +88,7 @@
     <div class="content-container">
       <div class="redeem-points-container">
         <?php if (isset($_SESSION['email'])) : ?>
+          <span class="points-text">Drogi użytkowniku, punkty odbierać można co 3600 sekund</span>
           <form class="redeem-points-form" action="claimPoints" method="POST">
             <button class="redeem-points-form--button" type="submit" name="redeem_points">Odbierz punkty</button>
           </form>

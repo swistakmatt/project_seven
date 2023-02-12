@@ -1,0 +1,110 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #1a1c24;
+  color: #fff;
+}
+
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+  width: 90vw;
+  background-color: rgba(36, 37, 47, 0.9);
+  border-radius: 1rem;
+}
+
+.admin-column-names {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.admin-column-names p {
+  color: #fed14c;
+  margin-bottom: 0;
+}
+
+.admin-container ul {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 80vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  list-style-type: none;
+  padding: 0;
+}
+
+.admin-container ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  font-weight: 300;
+  padding: 0.2rem 0;
+}
+
+.admin-container ul li:nth-child(odd) {
+  background-color: rgba(48, 50, 63, 0.9);
+}
+
+.id_user,
+.nickname,
+.email,
+.created,
+.role,
+.balance,
+.claim_timestamp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.id_user,
+.role {
+  width: 5%;
+}
+
+.nickname,
+.email {
+  width: 15%;
+}
+
+.balance,
+.claim_timestamp,
+.created {
+  width: 20%;
+}
+
+a {
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+  /* height: 2rem; */
+  background-color: rgba(48, 50, 63, 0.9);
+  overflow-x: auto;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fed14c;
+  border-radius: 0.4rem;
+}
