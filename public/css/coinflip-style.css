@@ -489,3 +489,27 @@ input[type="radio"]:checked ~ label {
   border: 1px solid rgba(85, 85, 85, 1);
   background-color: #141419;
 }
+
+@media screen and (max-width: 768px) {
+  .bet-input-button,
+  .nav-buttons-games--coinflip,
+  .nav-buttons-games--roulette,
+  .small-logo-svg,
+  .polish-flag-svg,
+  .language_text,
+  .logged-in-text {
+    display: none;
+  }
+
+  .nav-buttons-games {
+    gap: 1.5rem;
+  }
+
+  .bet-form-options {
+    gap: 1rem;
+  }
+
+  .coinflip-labels {
+    padding: 1rem;
+  }
+}

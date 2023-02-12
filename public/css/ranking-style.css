@@ -382,3 +382,25 @@ span {
   height: 16rem;
   width: 16rem;
 }
+
+@media screen and (max-width: 768px) {
+  .bet-input-button,
+  .nav-buttons-games--coinflip,
+  .nav-buttons-games--roulette,
+  .small-logo-svg,
+  .polish-flag-svg,
+  .language_text,
+  .logged-in-text,
+  .ranking-info-container {
+    display: none;
+  }
+
+  .nav-buttons-games {
+    gap: 1.5rem;
+  }
+
+  .ranking-container {
+    width: 100%;
+    height: 80vh;
+  }
+}

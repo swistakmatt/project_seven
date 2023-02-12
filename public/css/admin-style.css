@@ -108,3 +108,13 @@ a {
   background-color: #fed14c;
   border-radius: 0.4rem;
 }
+
+@media screen and (max-width: 768px) {
+  .admin-column-names {
+    font-size: 0.6rem;
+  }
+
+  .admin-container ul li {
+    font-size: 0.6rem;
+  }
+}

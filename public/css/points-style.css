@@ -350,3 +350,20 @@ span {
   text-align: center;
   line-height: 4rem;
 }
+
+@media screen and (max-width: 768px) {
+  .bet-input-button,
+  .nav-buttons-games--coinflip,
+  .nav-buttons-games--roulette,
+  .small-logo-svg,
+  .polish-flag-svg,
+  .language_text,
+  .logged-in-text,
+  .ranking-info-container {
+    display: none;
+  }
+
+  .nav-buttons-games {
+    gap: 1.5rem;
+  }
+}
