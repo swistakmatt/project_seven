@@ -1,6 +1,4 @@
 <?php
-
-require_once 'config.php';
 class Database
 {
     private $username;
@@ -10,10 +8,10 @@ class Database
 
     public function __construct()
     {
-        $this->username = DB_USERNAME;
-        $this->password = DB_PASSWORD;
-        $this->host = DB_HOST;
-        $this->database = DB_DATABASE;
+        $this->username = $_ENV["DB_USERNAME"];
+        $this->password = $_ENV["DB_PASSWORD"];
+        $this->host = $_ENV["DB_HOST"];
+        $this->database = $_ENV["DB_DATABASE"];
     }
 
     public function connect()
