@@ -4,14 +4,18 @@
 
 # <p align="center">project_seven</p>
 
-<div align="center">
 Compete with others, gain ranking points and have fun!
-
-<br>
 
 Our website is currently under development, but you can already register and start playing!
 
-</div>
+## setup
+
+1. Clone the repository `git clone https://github.com/swistakmatt/project_seven.git`
+2. Install [Docker](https://www.docker.com/products/docker-desktop)
+3. Create a config.php file in the root of the cloned repository and set up the necessary database connection details, such as the username, password, host, and database name.
+4. Run `docker-compose build` in the project root directory to build the server and database containers.
+5. Run `docker-compose up -d` in the project root directory to start the server and database containers in the background (detached mode) and run `docker-compose down` to stop them. You can also use `docker-compose up` to start the containers in the foreground and see the logs.
+6. Open `localhost:8080` in your browser
 
 ---
 
