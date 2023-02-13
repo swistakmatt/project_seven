@@ -52,7 +52,7 @@
         </div>
       </form>
     </div>
-    <a href="/recovery">
+    <a href="">
       <span>Nie możesz się zalogować?</span>
     </a>
     <a href="/register">

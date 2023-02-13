@@ -29,50 +29,6 @@ span {
   background: #1a1c24;
 }
 
-.game-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  align-self: center;
-  justify-self: center;
-  min-height: 80vh;
-}
-
-.polish-flag-svg {
-  height: 1.2rem;
-}
-
-.small-logo-svg {
-  height: 2rem;
-  margin-left: 1rem;
-}
-
-.nav-container {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 3.6rem;
-  background-color: #24252f;
-  align-items: center;
-  justify-content: flex-start;
-  z-index: 100;
-}
-
-.nav-buttons-games {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-self: center;
-  gap: 3rem;
-  margin-left: auto;
-  text-transform: uppercase;
-  font-weight: 900;
-}
-
 .roulette-svg {
   filter: brightness(0) saturate(100%) invert(75%) sepia(81%) saturate(629%)
     hue-rotate(334deg) brightness(104%) contrast(106%);
@@ -91,225 +47,14 @@ span {
   color: #858585;
 }
 
-.nav-buttons-options {
+.game-container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-self: flex-end;
-  gap: 1.2rem;
-  margin-left: auto;
-}
-
-.nav-buttons-games > a,
-.nav-buttons-options > a {
-  display: flex;
-  flex-direction: row;
-  color: #fff;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.6rem;
-}
-
-.coinflip-svg,
-.roulette-svg {
-  height: 2.4rem;
-}
-
-.gift-svg {
-  height: 1.6rem;
-}
-
-.logged-in-text {
-  display: inline-block;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 400;
-}
-
-.login-button {
-  display: inline-block;
-  background-color: #02bf4d;
-  padding: 0.8rem;
-  height: 1rem;
-  border-radius: 0.4rem;
-}
-
-.gift-button {
-  display: inline-block;
-  background-color: #fed14c;
-  padding: 0.8rem;
-  height: 1rem;
-  border-radius: 0.4rem;
-}
-
-.register-button {
-  display: flex;
-  background-color: #d8d8d8;
-  padding: 0.8rem;
-  height: 2rem;
-  width: 10rem;
-  border-radius: 0.4rem;
-}
-
-.ranking-button {
-  display: flex;
-  background-color: #2fa8ff;
-  padding: 0.8rem;
-  height: 2rem;
-  width: 10rem;
-  border-radius: 0.4rem;
-}
-
-.logout-button {
-  display: flex;
-  background-color: #ff2f2f;
-  padding: 0.8rem;
-  height: 2rem;
-  width: 10rem;
-  border-radius: 0.4rem;
-}
-
-.admin-button {
-  display: flex;
-  background-color: #ff2fa1;
-  padding: 0.8rem;
-  height: 2rem;
-  width: 10rem;
-  border-radius: 0.4rem;
-}
-
-.info-button {
-  display: flex;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 0.8rem;
-  height: 2rem;
-  width: 10rem;
-  border-radius: 0.4rem;
-}
-
-.claim-points_text,
-.login-button_text,
-.register-button_text {
-  color: #000;
-  font-weight: 400;
-}
-
-.logout-button_text,
-.ranking-button_text,
-.admin-button_text {
-  color: #fff;
-  font-weight: 400;
-}
-
-.info-button_text {
-  color: #fec227;
-  font-weight: 400;
-}
-
-.burger-menu-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 2rem;
-  height: 1.5rem;
-  cursor: pointer;
-  margin-right: 1.2rem;
-}
-
-.burger-menu-line {
-  width: 2rem;
-  height: 0.25rem;
-  background-color: #fec227;
-  border-radius: 0.25rem;
-  transition: transform 0.3s ease;
-}
-
-.burger-menu-button.open .line1 {
-  transform: translateY(0.625rem) rotateZ(45deg);
-}
-
-.burger-menu-button.open .line3 {
-  transform: translateY(-0.625rem) rotateZ(-45deg);
-}
-
-.burger-menu-button.open .line2 {
-  transform: scale(0);
-}
-
-.burger-nav {
-  display: none;
-}
-
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.burger-nav.open {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 18rem;
-  height: calc(100vh - 3.6rem);
-  background-color: rgba(36, 37, 47, 0.9);
-  z-index: 99;
-  margin-top: 3.6rem;
-  -webkit-animation: fadeIn 0.3s;
-  animation: fadeIn 0.3s;
-}
-
-.burger-nav-top {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  margin-top: 2rem;
-  gap: 2rem;
-}
-
-.burger-nav-bottom {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  margin-top: auto;
-  margin-bottom: 2rem;
-  gap: 2rem;
-}
-
-.saldo-container {
-  display: flex;
-  flex-direction: row;
-  align-self: flex-start;
-  justify-self: flex-start;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem 0rem 1rem 1rem;
-  gap: 0.6rem;
-  padding: 0.6rem 0.8rem;
-  background-color: #141419;
-  border-radius: 0.8rem;
-}
-
-.saldo-text,
-.saldo-amount {
-  color: #fff;
-  display: inline-block;
+  align-self: center;
+  justify-self: center;
+  min-height: 80vh;
 }
 
 .roulette-game-container {
@@ -403,20 +148,6 @@ span {
   flex-direction: column;
 }
 
-.bet-form-amount {
-  display: flex;
-  flex-direction: row;
-  align-self: center;
-  align-items: center;
-  justify-content: space-around;
-  gap: 0.6rem;
-  margin-top: 2rem;
-  padding: 0.6rem 1rem;
-  border-radius: 0.8rem;
-  background-color: #141419;
-  width: fit-content;
-}
-
 .bet-form-color {
   display: flex;
   flex-direction: row;
@@ -424,30 +155,6 @@ span {
   justify-content: center;
   gap: 3rem;
   margin-top: 2rem;
-}
-
-.bet-input {
-  height: 1.8rem;
-  background-color: #141419;
-  border-radius: 0.4rem;
-  border: 1px solid #555555;
-  color: #fff;
-  text-align: center;
-  outline: none;
-  margin: 0 0.5rem;
-  font-family: "Roboto", sans-serif;
-}
-
-.bet-input-button {
-  background-color: #1a1c24;
-  color: #fff;
-  border: 1px solid #555555;
-  border-radius: 0.4rem;
-  padding: 0.35rem 0.6rem;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
 }
 
 .color-button {
